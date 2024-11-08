@@ -1,0 +1,12 @@
+.DS_Store
+__pycache__/
+.pytest_cache/
+.coverage
+*.txt
+*.csv
+*.log
+*.parquet
+*.ipynb
+.idea/*
+!setting*.json
+!requirements.txt
