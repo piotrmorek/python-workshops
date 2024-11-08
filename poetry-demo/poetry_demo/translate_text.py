@@ -1,8 +1,12 @@
 import json
 import os
 from typing import List
+from pydantic import BaseModel
 
-class WordCollection:
+class WordsData(BaseModel):
+    words: List[str]
+    lang: str
+class WordCollection: 
     words: List[str]
     lang: str = 'en'
 
@@ -26,6 +30,7 @@ class WordCollection:
     
 
 def main():
-    data = WordCollection.from_json('words.json')
+    # data = WordCollection.from_json('words.json')
+    data = WordsData.parse_file('words.json')
     print(data)
     
